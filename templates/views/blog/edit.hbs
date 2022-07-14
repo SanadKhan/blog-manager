@@ -1,0 +1,32 @@
+{{>header}}
+    <div class="container pt-3"><br>
+        <form method="POST" action="/blog/update/{{blog_id}}">
+            <fieldset>
+                <legend>{{page_title}}</legend><br><br>
+         
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="form-label" for="form3Example3">Title</label>
+                            <input type="text" name="title" class="form-control"
+                    placeholder="Enter Title" value="{{title}}" required/>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="form-label" for="form3Example3">Description</label>
+                            <textarea class="form-control" name="description" cols="30" rows="10" >
+                            {{description}}</textarea>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="text-center text-lg-start mt-4 pt-2">
+                    <input type="submit" class="btn btn-primary" value="Update">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+{{>footer}}
